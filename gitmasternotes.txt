@@ -1,38 +1,67 @@
-git clone "url link without"
-cd .\dsadump (changing the directory to work)
-ls
-ls -a
-git status
+# < This is step used to clone the remote repo to local repo to use it>
+
+1) git clone "url link without"
+2) cd .\dsadump (changing the directory to work)
+3) ls
+4) ls -a
+5) git status (There are four status)
 (status)
-untracked
-modified
-staged
-unmodified
+a) untracked (abhi just create hui hai)
+b) modified (abhi unme kuch changes huwe hai)
+c) staged (staging area mai pahuch chuki hai, commit hone ka wait kar rahi hai)
+**Note** :- if you want to remove a file from commit area then just (git rem --cached a.txt) {here a.txt is the name of the file}
+d) unmodified (koi bhi changes nhi huwe hai kisi bhi file mai)
 
-git add . (adds new or changed files  in your working directory to the Git staging area " '.' means add all")
-git commit -m "yaha p tera finally upload ho jayega" (it is the record of changes)
-git push (upload local repo content to remote repo) {here from origin we are calling to the remote repo and in that repo we are refering to the main branch}
+6) git add . (adds new or changed files  in your working directory to the Git staging area " '.' means add all")
+7) git commit -m "yaha p tera finally upload ho jayega" (it is the record of changes)
+8) git push (upload local repo content to remote repo) {here from origin we are calling to the remote repo and in that repo we are refering to the main branch}
 
- < now we are making a project in our local repo first then push it on the git>
-cd .. (this help to get back from a directory)
-mkdir name (this help to create a local folder on the local device)
+
+
+
+
+# < Now we are making a project in our local repo first then push it on the git>
+
+1) cd .. (this help to get back from a directory)
+2) mkdir name (this help to create a local folder on the local device)
 Q) how do we know this not a repo right now?
 A) we will only get two file (.  , ..) when we do ls
-  
-git init (this will   create .git folder in the directory {basic init is use to create a new git repo})
-clear 
-git add .
-git remote add origin <--link--> { origin can be replace with any name}
-git remote -v ( to verify remote)
-git branch (to check branch)
-git branch -M main  (to rename branch)
+3) ccd name (here we will change the directory to the directory we maked using mkdir) 
+4) git init (this will   create .git folder in the directory {basic init is use to create a new git repo})
+-->> clear (it is just used to clear the mess)
+5) git add .
+6) git remote add origin <--link--> { origin can be replace with any name}
+note:- we have to always check the our remote repo and branch, origin is the file original repo
+7) git remote -v ( to verify remote)
+8) git branch (to check branch)
+9) git branch -M main  (to rename branch)
 
-**only when the below steps are not working**{
+**only when the below steps are not working**
+{
 git add .
 git commit -m "any message of your choice"
-git push origin main  { we can also use git push -u origin main, to set it permanent to that we don't have to verify each time that on which repo and branch we are refering to while pushing}
- 
-{ now if you want to make a file then just use touch command and then use ( git add .) then use (git status) then (git commit -m "comments") then just pom(git push origin main {as main is our branch name}) then the file will be pushed in the repository on github.}
+}
+10) git push origin main  { we can also use git push -u origin main, to set it permanent to that we don't have to verify each time that on which repo and branch we are refering to while pushing. }
+# < This are some steps to push any modification in real time >
+{ now if you want to make a file then just use touch command (to make the file) , ls command to verify that the new file is added in the current directory and then use ( git add .) then use (git status) then (git commit -m "comments") then just pom(git push origin main {as main is our branch name}) then the file will be pushed in the repository on github.}
+
+** Note ** :- a) if you want to remove a file from git staging area then "git rem --cached a.txt". 
+              b) if you want to check the history then "git log".
+
+
+
+
+
+# < Making changes in a repo and opening a pull request >
+1) first click on fork, then create a new fork. (on github website).
+2) git clone the repository on your system using (git clone <--link-->).
+3) git add .
+4) git commit -m "any comment"
+5) git push origin main (pom kardo)
+6) now go to the repository where you wanted to fork the changes and look for pull request in contribute
+7) there should a open pull request, click on it.
+8) create a pull request now.
+9) add a discription and give it a name,,,  then "create pull request".
 
 
  
